@@ -1,0 +1,69 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    top: 11vh;
+    position: fixed;
+    height: 89vh;
+    width: 80vw;
+    overflow-y: scroll;
+    font-size: 15px;
+    table{
+        thead{
+            color: rgb(187, 187, 178);
+            .date{
+                text-align: center;
+            }
+        }
+        tbody{
+            .list1-name{
+                color: rgb(94, 179, 248);
+            }
+            tr{
+                &:hover{
+                    cursor: pointer;
+                    background-color: rgba(248, 248, 248, 0.938);  
+                    .actions{
+                        color: black;
+                    }
+                }
+                .name{
+                    width: 50%;
+                }
+                .date{
+                    color: rgba(184, 179, 179, 0.938);
+                    text-align: center;
+                }
+                .actions{
+                    width:20%;
+                    color: rgba(184, 179, 179, 0.938);
+                    i{
+                        padding-left: 25px;
+                    }
+                }
+                td{
+                    button{
+                        width: 100%;
+                        padding: 3px;
+                        outline: none;
+                        border: none;
+                        background-color: white;
+                        border-bottom: solid 4px white;
+                
+                        &:hover{
+                            background-color: white;
+                            border-bottom: solid 4px  rgb(38, 65, 92);
+                            color:   rgb(38, 65, 92);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:750px){
+    .wrapper{
+        font-size: 10px;
+    }
+}

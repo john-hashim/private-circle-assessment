@@ -1,0 +1,23 @@
+<div class="wrapper">
+    <div class="items">
+        <div class="item">
+            <i class="fa fa-list-ul" aria-hidden="true"></i>
+            <p>SAVED LISTS</p>
+        </div>
+        <div class="item1">
+            <i class="fa fa-filter" aria-hidden="true"></i>
+            <p>SAVED FILTERS</p>
+        </div>
+        <div class="item1">
+            <i class="fa fa-history" aria-hidden="true"></i>
+            <p>SEARCH HISTORY</p>
+        </div>
+    </div>
+    <div class="search">
+        <form>
+            <div class="form-group">
+                <input type="email" class="form-control" (ngModelChange)="onSearch($event)" [(ngModel)]="searchItem" name=searchItem id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search">
+            </div>
+        </form>
+    </div>
+</div>

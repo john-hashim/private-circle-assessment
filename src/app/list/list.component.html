@@ -1,0 +1,38 @@
+<div class="wrapper">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" class="date">Date</th>
+            <th scope="col" >List Name</th>
+            <th scope="col">No Of Entities</th>
+            <th scope="col">Actions</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let item of listItem1 | filter:filterName:'name'">
+            <tr>
+              <td scope="row" class="date"><i class="fa fa-eercast" aria-hidden="true"></i></td>
+              <td class="name list1-name">{{ item.name }}</td>
+              <td class="entities">{{ item.Entities }}</td>
+              <td class="actions">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              </td>
+              <td><button (click)="onClickDetails(item.details)" >Details</button></td>
+            </tr>
+        </tbody>
+        <tbody *ngFor="let item of listItem2 | filter:filterName:'name'">
+          <tr>
+            <td scope="row" class="date">{{ item.date }}</td>
+            <td class="name">{{ item.name }}</td>
+            <td class="entities">{{ item.Entities }}</td>
+            <td class="actions">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+            </td>
+            <td><button (click)="onClickDetails(item.details)" >Details</button></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
